@@ -1,10 +1,33 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .categories {
+  overflow-x: auto; // Включаем горизонтальный скролл
+  max-width: 100%;
+  padding-bottom: 5px; // Чтобы скролл не перекрывал контент
+
+
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #282828;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    cursor: pointer;
+  }
+
+
   ul {
     display: flex;
-flex-wrap: wrap;
-gap: 5px;
+    width: max-content; // Чтобы список не переносился
+
     li {
       background-color: #f9f9f9;
       padding: 13px 30px;
@@ -18,11 +41,9 @@ gap: 5px;
       &:hover {
         background-color: darken(#f9f9f9, 2%);
       }
-
       &:active {
         background-color: darken(#f9f9f9, 5%);
       }
-
       &.active {
         background-color: #282828;
         color: #fff;

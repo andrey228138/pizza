@@ -52,6 +52,9 @@ body {
     justify-content: space-between;
     @media (max-width: 1290px) {
       flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    
       gap: 10px 0px;
     }
   }
@@ -329,4 +332,7 @@ body {
       font-size: 18px;
     }
   }
+  .content__items {
+  display: block ;
+}
 }

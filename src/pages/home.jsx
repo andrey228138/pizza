@@ -16,7 +16,9 @@ export default function Home() {
       .then((arr) => {
         setItems(arr);
         setIsLoading(false);
+        
       });
+      window.scrollTo(0,0)
   }, []);
 
   return (
