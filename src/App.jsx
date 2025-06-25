@@ -3,7 +3,7 @@ import "./scss/app.scss";
 import Home from "./pages/home";
 import Header from "./component/header";
 import Cart from "./pages/cart";
-import NotFound from "./component/NotFound/NotFound";
+import NotFound404 from "./pages/NotFound404";
 import { Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/cart" element={<Cart />} />
-              <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<NotFound404 />} />
             </Routes>
           </div>
         </div>
