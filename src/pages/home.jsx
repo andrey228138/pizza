@@ -8,6 +8,7 @@ import Skeleton from "../component/home/pizzaBlock/skeleton";
 export default function Home() {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+ 
   useEffect(() => {
     fetch("https://685a38f89f6ef96111556bfb.mockapi.io/items")
       .then((res) => {
