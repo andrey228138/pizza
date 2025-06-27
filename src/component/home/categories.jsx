@@ -9,8 +9,8 @@ const categories = [
   'Закрытые'
 ];
 
-export default function Categories() {
-  const [activeIndex, setActiveIndex] = useState(0);
+export default function Categories({value, onClickCategory}) {
+  
 
   return (
     <div className="categories">
@@ -18,8 +18,8 @@ export default function Categories() {
         {categories.map((categoryName, index) => (
           <li
             key={categoryName}
-            className={activeIndex === index ? 'active' : ''}
-            onClick={() => setActiveIndex(index)}
+            className={value === index ? 'active' : ''}
+            onClick={() => onClickCategory(index)}
           >
             {categoryName}
           </li>

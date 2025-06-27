@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Sort() {
+export default function Sort({value,onClickSort}) {
   const [active, setActive] = useState(false);
   const [sort, setSort] = useState("популярности");
 
